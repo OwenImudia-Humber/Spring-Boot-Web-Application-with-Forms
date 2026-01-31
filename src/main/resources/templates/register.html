@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"  href="/style.css">
+    <title>Registration</title>
+</head>
+<body>
+
+<h1> Register for your Courses Here!</h1>
+
+<form th:action="@{/confirmation}" th:object="${user}" method="post">
+    <p>Name: <input type="text" th:field="*{name}" /></p>
+    <p>Email: <input type="email" th:field="*{email}" /></p>
+    <p>Course: <input type="text" th:field="*{course}" /></p>
+    <p>Level: <input type="number" th:field="*{level}" /></p>
+     <input type="submit" value="Submit" />
+</form>
+
+
+</body>
+</html>
